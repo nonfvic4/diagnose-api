@@ -13,8 +13,8 @@ class AnalyzeInput(BaseModel):
 
 @app.post("/analyze")
 async def analyze(input_data: AnalyzeInput):
+    # 仮のJSONを返す（画像解析なし）
     return {
-        "patient_id": input_data.patient_id,
         "face": {
             "score": 78,
             "il_value": 33,
